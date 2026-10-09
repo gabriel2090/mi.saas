@@ -2,7 +2,8 @@
   "name": "mi-saas",
   "private": true,
   "scripts": {
-    "start": "serve . --no-clipboard --listen tcp://0.0.0.0:${PORT:-3000}"
+    "build": "node scripts/preparar-salida.mjs",
+    "start": "serve dist --no-clipboard --listen tcp://0.0.0.0:${PORT:-3000}"
   },
   "dependencies": {
     "serve": "14.2.5"

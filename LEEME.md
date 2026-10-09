@@ -16,7 +16,7 @@ No escriba en esta carpeta rutas de su computador.
 
 Copie solo esta carpeta a un sitio nuevo.
 
-- **Railway:** conecte el repositorio que solo tiene esta carpeta. Railway ejecuta `npm start` y sirve los archivos en el puerto que le asigna.
+- **Railway:** conecte el repositorio que solo tiene esta carpeta. El build copia la página a `dist/` (Railway lo exige) y `npm start` la publica en el puerto que le asigna.
 - **Netlify:** «Add new site» → «Deploy manually» y suelte esta carpeta. `netlify.toml` ya dice que la raíz publicada es esta carpeta. También puede crear un repositorio que contenga únicamente estos archivos y conectarlo.
 - **Vercel:** importe un repositorio que solo tenga esta carpeta, o suba la carpeta como raíz del proyecto. No hace falta comando de build.
 - **Otra copia:** cualquier hosting de archivos estáticos sirve con `index.html` en la raíz.
