@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NOMBRE — cómo está hecho</title>
+    <meta
+      name="description"
+      content="Aplicación de escritorio para inventario, facturación y cartera. Electron, React, TypeScript y SQLite, con pruebas y copias de seguridad. No emite factura electrónica."
+    />
+    <meta property="og:title" content="NOMBRE — cómo está hecho" />
+    <meta
+      property="og:description"
+      content="Escritorio offline para inventario, facturas y cartera. Electron, React, TypeScript y SQLite."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/capturas/20-ventanas.webp" />
+    <meta property="og:locale" content="es_CO" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <header class="cabecera">
+      <a class="marca" href="index.html">
+        <img src="favicon.svg" alt="" width="36" height="36" />
+        <span data-nombre>NOMBRE</span>
+      </a>
+      <nav>
+        <a href="index.html">Para el negocio</a>
+        <button type="button" class="tema" data-tema-boton>Oscuro</button>
+      </nav>
+    </header>
+
+    <main class="envoltorio seccion">
+      <h1>Un sistema de escritorio para el inventario y la facturación de un negocio</h1>
+      <p>
+        Sirve a una tienda o a un negocio mediano que necesita saber qué hay, qué se vendió, quién
+        debe y cómo cerró la caja. Corre en Windows, sin servidor y sin internet.
+      </p>
+      <p class="aviso-dian">
+        Es control interno. <strong>No emite factura electrónica ni se conecta a la DIAN.</strong>
+      </p>
+
+      <h2>El problema</h2>
+      <p>
+        El inventario se descuadra, los fiados quedan en notas y el cierre de caja no coincide con
+        el efectivo. Un programa en la nube se detiene cuando se va la red. Aquí la base queda en
+        el mismo computador.
+      </p>
+
+      <h2>Funciones, cada una con su pantalla</h2>
+
+      <article class="funcion">
+        <div class="funcion__texto">
+          <h3>Arranque</h3>
+          <p>Barra de procesos, buscador con Ctrl+K y aviso de que los datos son de desarrollo en estas fotos.</p>
+        </div>
+        <figure class="marco" data-ampliar="completa">
+          <div class="marco__barra"><span>Inicio</span><span></span></div>
+          <img src="assets/capturas/01-inicio.webp" alt="Barra de iconos de la aplicación" />
+        </figure>
+      </article>
+
+      <article class="funcion">
+        <div class="funcion__texto">
+          <h3>Productos, clientes y proveedores</h3>
+          <p>Maestros con código, precios, identificación y estado. Nada de esta página usa datos de un negocio real.</p>
+        </div>
+        <figure class="marco" data-ampliar="completa">
+          <div class="marco__barra"><span>Clientes</span><span></span></div>
+          <img src="assets/capturas/03-clientes.webp" alt="Lista de clientes de ejemplo" />
+        </figure>
+      </article>
+
+      <article class="funcion">
+        <div class="funcion__texto">
+          <h3>Compra y venta</h3>
+          <p>La factura de proveedor entra mercancía. La de cliente la saca y, si es a crédito, queda en cartera.</p>
+        </div>
+        <div>
+          <figure class="marco" data-ampliar="completa">
+            <div class="marco__barra"><span>Facturar</span><span></span></div>
+            <img src="assets/capturas/06-factura.webp" alt="Ventana completa de Facturar" />
+          </figure>
+          <div class="detalles">
+            <figure class="marco marco--detalle" data-ampliar="detalle">
+              <div class="marco__barra"><span>Detalle · atajo</span><span></span></div>
+              <img src="assets/capturas/21-atajos.webp" alt="Pestañas con el atajo de cada borrador" />
+            </figure>
+            <figure class="marco marco--detalle" data-ampliar="detalle">
+              <div class="marco__barra"><span>Detalle · total</span><span></span></div>
+              <img src="assets/capturas/detalle-total.webp" alt="Total de la factura escrito en letras" />
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="funcion">
+        <div class="funcion__texto">
+          <h3>Teclado e impresión</h3>
+          <p>
+            Seis borradores (Alt+1…Alt+6), cantidad con Enter y tirilla térmica. El video no tiene
+            sonido.
+          </p>
+        </div>
+        <figure class="marco" data-ampliar="completa">
+          <div class="marco__barra"><span>Video</span><span></span></div>
+          <video autoplay muted playsinline loop poster="assets/capturas/06-factura.webp">
+            <source src="assets/capturas/facturar-atajos.webm" type="video/webm" />
+            <source src="assets/capturas/facturar-atajos.mp4" type="video/mp4" />
+          </video>
+        </figure>
+      </article>
+
+      <article class="funcion">
+        <div class="funcion__texto">
+          <h3>Cartera</h3>
+          <p>Abono de cliente, cuentas por cobrar y cuentas por pagar, en la misma transacción que el inventario cuando el documento lo toca.</p>
+        </div>
+        <figure class="marco" data-ampliar="completa">
+          <div class="marco__barra"><span>Abono de cliente</span><span></span></div>
+          <img src="assets/capturas/08-abono-cliente.webp" alt="Pantalla de abono de cliente" />
+        </figure>
+      </article>
+
+      <article class="funcion">
+        <div class="funcion__texto">
+          <h3>Inventario</h3>
+          <p>El stock es la suma del kardex. El reporte valorizado muestra existencias y costo.</p>
+        </div>
+        <figure class="marco" data-ampliar="completa">
+          <div class="marco__barra"><span>Inventario</span><span></span></div>
+          <img src="assets/capturas/11-inventario.webp" alt="Inventario valorizado de ejemplo" />
+        </figure>
+      </article>
+
+      <article class="funcion">
+        <div class="funcion__texto">
+          <h3>Correcciones y devoluciones</h3>
+          <p>No se borra el documento: se anula o se corrige, y el historial guarda el cambio.</p>
+        </div>
+        <figure class="marco" data-ampliar="completa">
+          <div class="marco__barra"><span>Devolución</span><span></span></div>
+          <img src="assets/capturas/14-devolucion-saldo.webp" alt="Pantalla de devolución de una venta" />
+        </figure>
+      </article>
+
+      <article class="funcion">
+        <div class="funcion__texto">
+          <h3>Cierre, historial y ventanas</h3>
+          <p>Cierre de caja, historial de cambios y varias ventanas en el mismo escritorio.</p>
+        </div>
+        <figure class="marco" data-ampliar="completa">
+          <div class="marco__barra"><span>Historial</span><span></span></div>
+          <img src="assets/capturas/16-historial.webp" alt="Historial de cambios" />
+        </figure>
+      </article>
+
+      <article class="funcion">
+        <div class="funcion__texto">
+          <h3>Copias y recuperación</h3>
+          <p>
+            Copia local, restauración con contraseña y, si la base no abre, una pantalla anterior
+            al ingreso para elegir una copia válida.
+          </p>
+        </div>
+        <figure class="marco" data-ampliar="completa">
+          <div class="marco__barra"><span>Restaurar</span><span></span></div>
+          <img src="assets/capturas/18-restaurar.webp" alt="Diálogo para confirmar la restauración de una copia" />
+        </figure>
+      </article>
+
+      <h2>Atajos y trabajo sin red</h2>
+      <p>
+        Ctrl+K abre el buscador de procesos, Ctrl+F6 cambia de ventana y Ctrl+Shift+O las organiza.
+        Av. Pág guarda la factura. No hay sincronización en la nube: si no hay red, se sigue
+        vendiendo.
+      </p>
+      <figure class="marco" data-ampliar="completa">
+        <div class="marco__barra"><span>Proveedores</span><span></span></div>
+        <img src="assets/capturas/04-proveedores.webp" alt="Lista de proveedores de ejemplo" />
+      </figure>
+
+      <h2>Cómo está construido</h2>
+      <dl class="tecnica">
+        <dt>Escritorio</dt>
+        <dd>Electron, con la ventana aislada del sistema: la pantalla no usa Node ni la base directo.</dd>
+        <dt>Interfaz</dt>
+        <dd>React y TypeScript.</dd>
+        <dt>Datos</dt>
+        <dd>SQLite en el computador. El dinero va en pesos enteros y las cantidades en milésimas.</dd>
+        <dt>Reglas</dt>
+        <dd>La lógica de negocio está separada de la base y tiene pruebas unitarias. Migraciones, repositorios, flujos de punta a punta y una corrida de rendimiento cubren el resto.</dd>
+        <dt>Copias</dt>
+        <dd>Respaldo, restauración y una pantalla de recuperación si el archivo está dañado.</dd>
+        <dt>Instalador</dt>
+        <dd>NSIS por usuario, en español, versión 1.0.0, sin firma de código. Al desinstalar pregunta antes de borrar la base.</dd>
+      </dl>
+
+      <h2>Cómo se desarrolló</h2>
+      <p>
+        Por fases, con revisión al cierre de cada una: primero el diseño y las reglas, después cada
+        grupo de pantallas, y al final el instalador. Las decisiones que no estaban cerradas
+        quedaron escritas en vez de inventarse.
+      </p>
+
+      <h2>Contacto</h2>
+      <p>
+        <a data-linkedin href="#contacto">LinkedIn</a>
+        <a data-github href="#contacto">GitHub</a>
+        <a data-correo href="#contacto"></a>
+      </p>
+      <p data-sin-contacto>LinkedIn, GitHub y el correo se completan en <code>config.js</code>.</p>
+      <p><a href="index.html">Volver a la página del negocio</a></p>
+    </main>
+
+    <footer class="envoltorio pie">
+      <p><span data-nombre>NOMBRE</span> · página técnica · los nombres de las capturas son ficticios.</p>
+    </footer>
+
+    <dialog class="luz">
+      <div class="luz__barra">
+        <button type="button" data-zoom-menos>Alejar</button>
+        <button type="button" data-zoom-mas>Acercar</button>
+        <button type="button" data-luz-cerrar>Cerrar</button>
+      </div>
+      <div class="luz__lienzo" data-luz-medio></div>
+    </dialog>
+    <script src="config.js"></script>
+    <script src="js/sitio.js"></script>
+  </body>
+</html>

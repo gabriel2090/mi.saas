@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NOMBRE — sepa qué hay, quién debe y cuánto quedó en caja</title>
+    <meta
+      name="description"
+      content="NOMBRE lleva el inventario, las facturas, las cuentas por cobrar y por pagar y el cierre de caja en su computador, sin internet. Es control interno: no envía factura electrónica a la DIAN."
+    />
+    <meta property="og:title" content="NOMBRE" />
+    <meta
+      property="og:description"
+      content="Inventario, facturas, cartera y cierre de caja en su computador, sin internet. No es factura electrónica."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/capturas/06-factura.webp" />
+    <meta property="og:locale" content="es_CO" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <header class="cabecera">
+      <a class="marca" href="index.html">
+        <img src="favicon.svg" alt="" width="36" height="36" />
+        <span data-nombre>NOMBRE</span>
+      </a>
+      <nav>
+        <a class="solo-ancho" href="#funciones">Qué hace</a>
+        <a class="solo-ancho" href="#instalar">Instalar</a>
+        <a class="solo-ancho" href="#preguntas">Preguntas</a>
+        <a href="#contacto">Contacto</a>
+        <button type="button" class="tema" data-tema-boton>Oscuro</button>
+      </nav>
+    </header>
+
+    <main>
+      <div class="envoltorio hero">
+        <div>
+          <h1>Sepa qué hay en la bodega, quién le debe y si el cierre de caja cuadra.</h1>
+          <p>
+            Hecho para una tienda o un negocio mediano que hoy anota en cuadernos, en Excel o en un
+            programa que se queda corto. Funciona en el computador del negocio, aunque se vaya la
+            internet.
+          </p>
+          <p class="aviso-dian">
+            Es un control interno. <strong>No envía factura electrónica a la DIAN</strong> y no
+            reemplaza el facturador electrónico. La tirilla que imprime es el comprobante de su
+            negocio.
+          </p>
+          <p class="precio" data-precio>Pide tu cotización</p>
+          <div class="acciones">
+            <a class="boton boton--primario" data-whatsapp href="#contacto">Escribir por WhatsApp</a>
+            <a class="boton" data-demo href="#contacto">Solicitar demostración</a>
+          </div>
+        </div>
+        <figure class="marco" data-ampliar="completa">
+          <div class="marco__barra"><span>Facturar</span><span></span></div>
+          <video autoplay muted playsinline loop poster="assets/capturas/06-factura.webp">
+            <source src="assets/capturas/facturar-atajos.webm" type="video/webm" />
+            <source src="assets/capturas/facturar-atajos.mp4" type="video/mp4" />
+          </video>
+          <figcaption class="marco__barra">Sin sonido. Pulse para verlo más grande.</figcaption>
+        </figure>
+      </div>
+
+      <section class="envoltorio seccion" id="problemas">
+        <h2>Lo que se le empieza a perder</h2>
+        <div class="problemas">
+          <article>
+            <h3>El inventario no coincide</h3>
+            <p>Se vende algo que ya no está, o sobra mercancía que nadie contó.</p>
+          </article>
+          <article>
+            <h3>La cartera se le va de las manos</h3>
+            <p>Fiados y abonos quedan en notas sueltas y al final no se sabe quién debe.</p>
+          </article>
+          <article>
+            <h3>El cierre de caja no cuadra</h3>
+            <p>Al final del día el efectivo no coincide con lo vendido y toca adivinar.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="envoltorio seccion" id="funciones">
+        <h2>Qué resuelve en el día a día</h2>
+        <p>
+          Cada foto es la ventana completa, con nombres de ejemplo. En el celular, tóquela para
+          abrirla en grande y poder leerla.
+        </p>
+
+        <article class="funcion">
+          <div class="funcion__texto">
+            <h3>Facture sin soltar el teclado</h3>
+            <p>
+              Código del producto, Enter, cantidad, Enter. Hay seis ventas abiertas a la vez
+              (Alt+1 a Alt+6) para no hacer esperar al siguiente cliente. El atajo está escrito en
+              el botón.
+            </p>
+          </div>
+          <div>
+            <figure class="marco" data-ampliar="completa">
+              <div class="marco__barra"><span>Facturar</span><span></span></div>
+              <img src="assets/capturas/06-factura.webp" alt="Ventana completa de Facturar, con productos de ejemplo" />
+            </figure>
+            <div class="detalles">
+              <figure class="marco marco--detalle" data-ampliar="detalle">
+                <div class="marco__barra"><span>Detalle · atajo</span><span></span></div>
+                <img src="assets/capturas/21-atajos.webp" alt="Pestañas Alt+1 y Alt+2 de los borradores" />
+              </figure>
+              <figure class="marco marco--detalle" data-ampliar="detalle">
+                <div class="marco__barra"><span>Detalle · total</span><span></span></div>
+                <img src="assets/capturas/detalle-total.webp" alt="Total de la factura escrito en letras" />
+              </figure>
+            </div>
+          </div>
+        </article>
+
+        <article class="funcion">
+          <div class="funcion__texto">
+            <h3>Productos, clientes y proveedores en su sitio</h3>
+            <p>
+              Cada producto tiene código, precios y unidad. Clientes y proveedores quedan con su
+              identificación, teléfono y dirección.
+            </p>
+          </div>
+          <figure class="marco" data-ampliar="completa">
+            <div class="marco__barra"><span>Productos</span><span></span></div>
+            <img src="assets/capturas/02-productos.webp" alt="Lista de productos de ejemplo" />
+          </figure>
+        </article>
+
+        <article class="funcion">
+          <div class="funcion__texto">
+            <h3>La compra del proveedor entra al inventario</h3>
+            <p>Al guardar la factura del proveedor, la mercancía suma en la bodega y queda lo que se le debe.</p>
+          </div>
+          <figure class="marco" data-ampliar="completa">
+            <div class="marco__barra"><span>Factura de proveedor</span><span></span></div>
+            <img src="assets/capturas/05-compra.webp" alt="Pantalla para registrar una compra" />
+          </figure>
+        </article>
+
+        <article class="funcion">
+          <div class="funcion__texto">
+            <h3>Tirilla para impresora térmica</h3>
+            <p>
+              Al guardar la venta puede salir la tirilla de 80&nbsp;mm. Si la impresora está
+              apagada, la factura ya quedó guardada y se puede reimprimir después.
+            </p>
+          </div>
+          <figure class="marco" data-ampliar="completa">
+            <div class="marco__barra"><span>Tirilla</span><span></span></div>
+            <img src="assets/capturas/07-tirilla.webp" alt="Vista previa de una tirilla de ejemplo" />
+          </figure>
+        </article>
+
+        <article class="funcion">
+          <div class="funcion__texto">
+            <h3>Sepa quién le debe y registre el abono</h3>
+            <p>Cuentas por cobrar muestra la deuda. El abono se reparte en las facturas del cliente.</p>
+          </div>
+          <figure class="marco" data-ampliar="completa">
+            <div class="marco__barra"><span>Cuentas por cobrar</span><span></span></div>
+            <img src="assets/capturas/09-cuentas-cobrar.webp" alt="Listado de cuentas por cobrar de ejemplo" />
+          </figure>
+        </article>
+
+        <article class="funcion">
+          <div class="funcion__texto">
+            <h3>Y también lo que usted debe</h3>
+            <p>Cuentas por pagar y el abono al proveedor cierran el otro lado de la cartera.</p>
+          </div>
+          <figure class="marco" data-ampliar="completa">
+            <div class="marco__barra"><span>Cuentas por pagar</span><span></span></div>
+            <img src="assets/capturas/10-cuentas-pagar.webp" alt="Listado de cuentas por pagar de ejemplo" />
+          </figure>
+        </article>
+
+        <article class="funcion">
+          <div class="funcion__texto">
+            <h3>El inventario sale de los movimientos</h3>
+            <p>
+              No hay un número suelto que se pueda cambiar a mano. El kardex muestra entradas,
+              salidas y el saldo de cada producto.
+            </p>
+          </div>
+          <figure class="marco" data-ampliar="completa">
+            <div class="marco__barra"><span>Kardex</span><span></span></div>
+            <img src="assets/capturas/12-kardex.webp" alt="Kardex de un producto de ejemplo" />
+          </figure>
+        </article>
+
+        <article class="funcion">
+          <div class="funcion__texto">
+            <h3>Si la venta quedó mal, se corrige o se devuelve</h3>
+            <p>
+              Una factura no se borra: se corrige o se anula, y la devolución devuelve la mercancía
+              y ajusta lo que el cliente debe. Todo queda en el historial.
+            </p>
+          </div>
+          <figure class="marco" data-ampliar="completa">
+            <div class="marco__barra"><span>Corrección</span><span></span></div>
+            <img src="assets/capturas/13-correccion.webp" alt="Pantalla para corregir una factura de cliente" />
+          </figure>
+        </article>
+
+        <article class="funcion">
+          <div class="funcion__texto">
+            <h3>El cierre de caja con lo vendido</h3>
+            <p>Al final del día ve el efectivo, las otras formas de pago y si cuadra con lo contado.</p>
+          </div>
+          <figure class="marco" data-ampliar="completa">
+            <div class="marco__barra"><span>Cierre de caja</span><span></span></div>
+            <img src="assets/capturas/15-cierre-caja.webp" alt="Pantalla de cierre de caja" />
+          </figure>
+        </article>
+
+        <article class="funcion">
+          <div class="funcion__texto">
+            <h3>Varias ventanas a la vez</h3>
+            <p>Puede dejar la factura al lado del inventario, o acomodar las ventanas en columnas.</p>
+          </div>
+          <figure class="marco" data-ampliar="completa">
+            <div class="marco__barra"><span>Escritorio</span><span></span></div>
+            <img src="assets/capturas/20-ventanas.webp" alt="Dos ventanas abiertas lado a lado" />
+          </figure>
+        </article>
+
+        <article class="funcion">
+          <div class="funcion__texto">
+            <h3>Una copia de seguridad en su computador</h3>
+            <p>
+              Puede guardar una copia ahora y restaurarla si algo sale mal. También puede dejar una
+              copia diaria en otra carpeta, por ejemplo una memoria USB. Esa carpeta no se toca al
+              desinstalar.
+            </p>
+          </div>
+          <figure class="marco" data-ampliar="completa">
+            <div class="marco__barra"><span>Respaldos</span><span></span></div>
+            <img src="assets/capturas/17-respaldos.webp" alt="Lista de copias de seguridad" />
+          </figure>
+        </article>
+      </section>
+
+      <section class="envoltorio seccion" id="datos">
+        <h2>Sin internet, y los datos se quedan en su computador</h2>
+        <p>
+          No hay una cuenta en la nube. La base de datos vive en ese equipo. Si se daña, el programa
+          no pide la contraseña a ciegas: muestra las copias y deja restaurar una que sí sirva.
+        </p>
+        <figure class="marco" data-ampliar="completa">
+          <div class="marco__barra"><span>Recuperación</span><span></span></div>
+          <img
+            src="assets/capturas/19-recuperacion.webp"
+            alt="Aviso de que la base no abre y se puede restaurar una copia"
+          />
+        </figure>
+      </section>
+
+      <section class="envoltorio seccion" id="instalar">
+        <h2>Cómo se instala y cómo se pasa del sistema de hoy</h2>
+        <div class="pasos">
+          <article class="paso">
+            <h3>1. Instalar en Windows</h3>
+            <p>
+              El instalador es para un usuario, sin permisos de administrador. Crea accesos en el
+              escritorio y en el menú Inicio. La primera vez pide una contraseña del programa.
+            </p>
+          </article>
+          <article class="paso">
+            <h3>2. Datos del negocio</h3>
+            <p>
+              Nombre, NIT, dirección, teléfono, la impresora de tirilla y el número de la próxima
+              factura.
+            </p>
+          </article>
+          <article class="paso">
+            <h3>3. Traer lo que ya tiene</h3>
+            <p>
+              Productos, clientes, proveedores, saldos de inventario y saldos de cartera se pueden
+              cargar desde una hoja de cálculo, por columnas. Las facturas viejas no se copian una
+              por una: entra el saldo con el que empieza.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="envoltorio seccion faq" id="preguntas">
+        <h2>Preguntas frecuentes</h2>
+        <details>
+          <summary>¿Esto reemplaza la factura electrónica?</summary>
+          <p>No. No envía nada a la DIAN. Sirve para el control del negocio y para imprimir su tirilla.</p>
+        </details>
+        <details>
+          <summary>¿Funciona si se cae el internet?</summary>
+          <p>Sí. No necesita internet para vender, consultar inventario ni hacer el cierre.</p>
+        </details>
+        <details>
+          <summary>¿Varias personas con clave distinta?</summary>
+          <p>En esta versión hay una contraseña del programa. No hay usuarios separados.</p>
+        </details>
+        <details>
+          <summary>¿Se puede borrar una factura?</summary>
+          <p>No. Se anula o se corrige, y el cambio queda en el historial.</p>
+        </details>
+        <details>
+          <summary>¿Qué pasa con mis datos si desinstalo?</summary>
+          <p>
+            Por defecto se conservan la base y las copias. El desinstalador pregunta antes de
+            borrarlas. La copia que usted dejó en otra carpeta no se toca.
+          </p>
+        </details>
+      </section>
+
+      <section class="envoltorio seccion" id="contacto">
+        <div class="cierre">
+          <h2>Pida una demostración con los datos de su negocio</h2>
+          <p class="precio" data-precio>Pide tu cotización</p>
+          <div class="acciones" style="justify-content: center">
+            <a class="boton boton--primario" data-whatsapp href="#contacto">Escribir por WhatsApp</a>
+            <a class="boton" data-demo href="#contacto">Solicitar demostración</a>
+          </div>
+          <p data-sin-contacto>
+            El WhatsApp y el correo se escriben en <code>config.js</code> antes de publicar.
+          </p>
+          <p><a data-correo href="#contacto"></a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="envoltorio pie">
+      <p>
+        <span data-nombre>NOMBRE</span> · control interno de inventario y facturación · no es
+        factura electrónica.
+      </p>
+      <p>
+        <a href="proyecto.html">Cómo está hecho</a>
+        <a data-linkedin href="#contacto">LinkedIn</a>
+      </p>
+    </footer>
+
+    <dialog class="luz">
+      <div class="luz__barra">
+        <button type="button" data-zoom-menos>Alejar</button>
+        <button type="button" data-zoom-mas>Acercar</button>
+        <button type="button" data-luz-cerrar>Cerrar</button>
+      </div>
+      <div class="luz__lienzo" data-luz-medio></div>
+    </dialog>
+    <script src="config.js"></script>
+    <script src="js/sitio.js"></script>
+  </body>
+</html>

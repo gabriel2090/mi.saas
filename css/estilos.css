@@ -1,0 +1,384 @@
+:root {
+  --fondo: #dfe5ec;
+  --panel: #ffffff;
+  --texto: #1d2733;
+  --tenue: #5b6878;
+  --titulo: #2f4a6d;
+  --primario: #2563a8;
+  --primario-oscuro: #1b4d85;
+  --borde: #8a9bb0;
+  --alerta-fondo: #fff4dc;
+  --alerta: #9a5b00;
+  --exito: #1d7a3a;
+  --escritorio: #c9d3de;
+  --sombra: 0 12px 28px rgba(29, 39, 51, 0.14);
+  --ancho: 1080px;
+  color-scheme: light;
+}
+
+html[data-tema='oscuro'] {
+  --fondo: #1d2733;
+  --panel: #243140;
+  --texto: #e7eef6;
+  --tenue: #b7c3d1;
+  --titulo: #d5e2f2;
+  --borde: #3d5166;
+  --alerta-fondo: #3a2e16;
+  --alerta: #f2b01e;
+  --escritorio: #1a2430;
+  --sombra: 0 12px 28px rgba(0, 0, 0, 0.35);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Palatino, 'Palatino Linotype', Georgia, serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--titulo);
+}
+
+a {
+  color: var(--primario);
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+.envoltorio {
+  width: min(var(--ancho), calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 16px;
+  background: linear-gradient(180deg, var(--primario) 0%, var(--primario-oscuro) 100%);
+  color: #fff;
+}
+
+.cabecera a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  margin-right: auto;
+}
+
+.marca img {
+  width: 36px;
+  height: 36px;
+}
+
+.cabecera nav {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  font-size: 15px;
+}
+
+.tema {
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: transparent;
+  color: #fff;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.hero {
+  padding: 48px 0 24px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: clamp(32px, 5vw, 48px);
+}
+
+.aviso-dian {
+  margin: 16px 0;
+  padding: 12px 14px;
+  background: var(--alerta-fondo);
+  color: var(--alerta);
+  border-left: 4px solid #f2b01e;
+  font-size: 15px;
+}
+
+.precio {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 8px 0 16px;
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.boton {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 1px solid var(--borde);
+  background: var(--panel);
+  color: var(--texto);
+}
+
+.boton--primario {
+  background: linear-gradient(180deg, var(--primario) 0%, var(--primario-oscuro) 100%);
+  color: #fff;
+  border-color: var(--primario-oscuro);
+}
+
+.hero > *,
+.funcion > * {
+  min-width: 0;
+}
+
+.marco {
+  width: 100%;
+  min-width: 0;
+  background: var(--panel);
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  box-shadow: var(--sombra);
+  overflow: auto;
+}
+
+.marco__barra {
+  position: sticky;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 7px 10px;
+  background: var(--titulo);
+  color: #fff;
+  font-size: 13px;
+}
+
+.marco img,
+.marco video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  background: var(--escritorio);
+}
+
+.detalles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.marco--detalle .marco__barra {
+  background: var(--tenue);
+}
+
+.seccion {
+  padding: 36px 0;
+}
+
+.seccion h2 {
+  margin: 0 0 8px;
+  font-size: 32px;
+}
+
+.problemas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.problemas article,
+.faq details,
+.paso {
+  background: var(--panel);
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  padding: 14px 16px;
+}
+
+.funcion {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 22px;
+  align-items: center;
+  margin: 28px 0;
+}
+
+.funcion:nth-child(even) {
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+.funcion:nth-child(even) .funcion__texto {
+  order: 2;
+}
+
+.funcion h3 {
+  margin: 0 0 8px;
+  font-size: 26px;
+}
+
+.pasos {
+  display: grid;
+  gap: 12px;
+}
+
+.faq details + details {
+  margin-top: 8px;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.cierre {
+  padding: 28px;
+  background: var(--panel);
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.pie {
+  padding: 28px 0 40px;
+  color: var(--tenue);
+  font-size: 14px;
+}
+
+.pie a {
+  margin-right: 12px;
+}
+
+.tecnica dt {
+  font-weight: 700;
+  margin-top: 14px;
+}
+
+.luz {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: #0f1720;
+  color: #fff;
+}
+
+.luz[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.luz__barra {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 8px;
+  background: #1b2836;
+}
+
+.luz__barra button {
+  font: inherit;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.luz__lienzo {
+  flex: 1;
+  overflow: auto;
+  touch-action: pan-x pan-y;
+}
+
+.luz__lienzo img,
+.luz__lienzo video {
+  display: block;
+  max-width: none;
+  max-height: none;
+  width: var(--ancho-luz, 960px);
+  height: auto;
+  background: #fff;
+}
+
+@media (max-width: 800px) {
+  .cabecera nav .solo-ancho {
+    display: none;
+  }
+
+  .hero,
+  .funcion,
+  .funcion:nth-child(even),
+  .problemas {
+    grid-template-columns: 1fr;
+  }
+
+  .funcion:nth-child(even) .funcion__texto {
+    order: 0;
+  }
+
+  .hero {
+    padding-top: 28px;
+  }
+}
+
+@media (max-width: 420px) {
+  body {
+    font-size: 16px;
+  }
+
+  .envoltorio {
+    width: min(var(--ancho), calc(100% - 20px));
+  }
+
+  .cabecera {
+    padding-inline: 10px;
+  }
+}
