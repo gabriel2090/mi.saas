@@ -4,6 +4,9 @@
   --texto: #1d2733;
   --tenue: #5b6878;
   --titulo: #2f4a6d;
+  --barra: #2f4a6d;
+  --barra-detalle: #3d5166;
+  --enlace: #2563a8;
   --primario: #2563a8;
   --primario-oscuro: #1b4d85;
   --borde: #8a9bb0;
@@ -22,6 +25,9 @@ html[data-tema='oscuro'] {
   --texto: #e7eef6;
   --tenue: #b7c3d1;
   --titulo: #d5e2f2;
+  --barra: #2f4a6d;
+  --barra-detalle: #1b4d85;
+  --enlace: #9ec4ef;
   --borde: #3d5166;
   --alerta-fondo: #3a2e16;
   --alerta: #f2b01e;
@@ -57,7 +63,7 @@ h3 {
 }
 
 a {
-  color: var(--primario);
+  color: var(--enlace);
 }
 
 img,
@@ -76,8 +82,9 @@ video {
   top: 0;
   z-index: 5;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 16px;
+  gap: 10px 16px;
   padding: 10px 16px;
   background: linear-gradient(180deg, var(--primario) 0%, var(--primario-oscuro) 100%);
   color: #fff;
@@ -92,6 +99,8 @@ video {
   display: flex;
   align-items: center;
   gap: 10px;
+  min-width: 0;
+  flex: 1 1 12rem;
   font-weight: 700;
   margin-right: auto;
 }
@@ -103,8 +112,10 @@ video {
 
 .cabecera nav {
   display: flex;
-  gap: 14px;
+  flex-wrap: wrap;
+  gap: 10px 14px;
   align-items: center;
+  justify-content: flex-end;
   font-size: 15px;
 }
 
@@ -177,23 +188,34 @@ video {
 .marco {
   width: 100%;
   min-width: 0;
+  margin: 0;
   background: var(--panel);
   border: 1px solid var(--borde);
   border-radius: 6px;
   box-shadow: var(--sombra);
-  overflow: auto;
+  overflow: hidden;
 }
 
 .marco__barra {
-  position: sticky;
-  left: 0;
   display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 7px 10px;
-  background: var(--titulo);
+  align-items: center;
+  min-height: 32px;
+  padding: 6px 10px;
+  background: var(--barra);
   color: #fff;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
   font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.marco__nota {
+  margin: 0;
+  padding: 8px 10px;
+  background: var(--panel);
+  color: var(--tenue);
+  font-size: 13px;
+  line-height: 1.4;
 }
 
 .marco img,
@@ -212,8 +234,13 @@ video {
   margin-top: 10px;
 }
 
+.detalles > * {
+  min-width: 0;
+}
+
 .marco--detalle .marco__barra {
-  background: var(--tenue);
+  background: var(--barra-detalle);
+  color: #fff;
 }
 
 .seccion {
@@ -356,7 +383,8 @@ video {
   .hero,
   .funcion,
   .funcion:nth-child(even),
-  .problemas {
+  .problemas,
+  .detalles {
     grid-template-columns: 1fr;
   }
 
@@ -366,6 +394,11 @@ video {
 
   .hero {
     padding-top: 28px;
+  }
+
+  .seccion h2,
+  .funcion h3 {
+    overflow-wrap: anywhere;
   }
 }
 
@@ -380,5 +413,18 @@ video {
 
   .cabecera {
     padding-inline: 10px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .seccion h2 {
+    font-size: 26px;
+  }
+
+  .acciones .boton {
+    display: block;
+    text-align: center;
   }
 }
